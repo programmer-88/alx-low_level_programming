@@ -4,7 +4,7 @@
 
 /**
  * main - Entry point
- * @n: integer to autogenerate
+ * description - Generate a random number and print its state
  * Return: 0 
  */
 
@@ -16,15 +16,15 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if(n > 0)
 	{
-		printf("is positive\n");
+		printf("is positive\n", n);
 	}
 	else if(n == 0)
 	{
-		printf("is zero\n");
+		printf("is zero\n", n);
 	}
 	else
 	{
-		printf("is negative\n");
+		printf("is negative\n", n);
 	}
 	return (0);
 }
