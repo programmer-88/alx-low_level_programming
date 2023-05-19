@@ -4,7 +4,7 @@
 /**
  * main -generates a random number
  * description -generate a random number and print the last string and state
- * Return: 0 
+ * Return: 0
  */
 int main(void)
 {
@@ -20,4 +20,3 @@ int main(void)
 		printf("Last digit of %d is %d and is greater than 5\n", n, n % 10);
 return (0);
 }
-
