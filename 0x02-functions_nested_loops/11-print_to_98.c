@@ -2,7 +2,7 @@
 
 /**
  * print_to_98 - print natural numbers to 98
- * n: reference number
+ * @n: reference number
  * Return: null
  */
 void print_to_98(int n)
