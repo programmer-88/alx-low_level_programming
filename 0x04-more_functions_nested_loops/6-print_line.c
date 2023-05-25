@@ -8,27 +8,20 @@
 
 void print_line(int n)
 {
-	int l = 0;
+	int i;
 
-	if (n >= 0)
+	if (n <= 0)
 	{
-		while (n > 0)
-		{
-			while (l <= n)
-			{
-				putchar('_');
-				l++;
-			}
-		}
+		putchar('\n');
 	}
-	else if (n < 0 )
+	else if (n > 0)
 	{
-		while (n <= l)
+		i = 0;
+		while (i < n)
 		{
 			putchar('_');
-			n++;
+			i++;
 		}
+		putchar('\n');
 	}
-	putchar('$');
-	putchar('\n');
 }
