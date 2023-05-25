@@ -10,10 +10,24 @@ void print_line(int n)
 {
 	int l = 0;
 
-	while (n <= l)
+	if (n >= 0)
 	{
-		putchar('_');
-		n++;
+		while (n > 0)
+		{
+			while (l <= n)
+			{
+				putchar('_');
+				l++;
+			}
+		}
+	}
+	else if (n < 0 )
+	{
+		while (n <= l)
+		{
+			putchar('_');
+			n++;
+		}
 	}
 	putchar('$');
 	putchar('\n');
