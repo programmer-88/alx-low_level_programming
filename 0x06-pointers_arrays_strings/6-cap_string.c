@@ -2,7 +2,7 @@
 
 /**
  * cap_string - capitalises strings and word separation
- * @str: string to cap
+ * @s: string to cap
  * Return: 0 for success
  */
 
