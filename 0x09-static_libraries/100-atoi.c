@@ -1,12 +1,10 @@
 #include "main.h"
-
 /**
 * _atoi - changes ascii to int
 * @s: the string to be changed
 *
 * Return: the converted int
 */
-
 int _atoi(char *s)
 {
 	int i, d, n, len, f, digit;
