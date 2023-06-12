@@ -2,7 +2,7 @@
 
 /**
  * *_strdup - return a pointer to newly allocated space in memory
- * str: parameter string
+ * @str: parameter string
  * Return: pointer to newly allocated string
  */
 
@@ -26,4 +26,5 @@ char *_strdup(char *str)
 		cpy[j] = str[j];
 	}
 	return (cpy);
+	free (str);
 }
