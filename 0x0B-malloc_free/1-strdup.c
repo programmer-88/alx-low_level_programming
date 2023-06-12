@@ -9,7 +9,7 @@
 char *_strdup(char *str)
 {
 	int j;
-	int len = strlen(str) + 1;
+	int len = strlen(str);
 	char *cpy;
 
 	if (str == NULL)
@@ -17,7 +17,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	cpy = malloc(sizeof(char) * len);
+	cpy = malloc(sizeof(char) * len + 1);
 
 	if (cpy == NULL)
 	{
