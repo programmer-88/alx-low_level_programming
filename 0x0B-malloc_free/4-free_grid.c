@@ -2,7 +2,7 @@
 
 /**
  * free_grid - frees a 2D array previously created
- * @**grid: array created
+ * @grid: array created
  * @height: height of array
  * Return: is void
  */
