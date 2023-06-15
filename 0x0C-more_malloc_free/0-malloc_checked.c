@@ -8,9 +8,9 @@
 
 void *malloc_checked(unsigned int b)
 {
-	char *arr;
+	void *arr;
 
-	arr = (malloc(sizeof(char) * b));
+	arr = malloc(b);
 
 	if (arr == NULL)
 	{
