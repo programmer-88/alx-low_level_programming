@@ -4,6 +4,7 @@
  * init_dog - initialize a variable type
  * @d: dog
  * @name: name of dog
+ * @age: age of dog
  * @owner: dog's owner name
  */
 
