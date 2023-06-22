@@ -1,0 +1,11 @@
+#include <stdio.h>
+
+int main(void)
+{
+	int i = 3, j = 4;
+	char k = 'K';
+	int *pi = &i;
+	pi = &j;
+
+	printf("%i\n", *pi);
+}
