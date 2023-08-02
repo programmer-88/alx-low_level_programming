@@ -4,12 +4,12 @@
 /**
  * _print_rev_recursion - print a sting in reverse
  * @s: string to reverse
- * Rerutn: is void 
+ * Rerutn: is void
 */
 
 void _print_rev_recursion(char *s)
 {
-	
+
 	if (*s != '\0')
 	{
 		_print_rev_recursion(s + 1);
