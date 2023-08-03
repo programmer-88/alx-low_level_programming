@@ -36,6 +36,6 @@ int prime_check(int n, int i)
 	}
 	else
 	{
-		return (prime_check(n ,i - 1));
+		return (prime_check(n, i - 1));
 	}
 }
