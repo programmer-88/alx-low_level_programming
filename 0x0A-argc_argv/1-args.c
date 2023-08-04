@@ -9,7 +9,7 @@
 
 int main(int argc, char *argv[]__attribute__((unused)))
 {
-	int i = 0;
+	int i;
 
 	if (argc == 1)
 	{
@@ -17,10 +17,11 @@ int main(int argc, char *argv[]__attribute__((unused)))
 	}
 	else
 	{
-		if (i <= argc)
+		for (i = 0; i <= argc; i++)
 		{
-			i++;
+			;
 		}
+		
 
 	printf("%d\n", argc - 1);
 	}
