@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints the arguments passed to the program
+ * main - multiply two arguments passed to the program
  * @argc: argument count
  * @argv: argument value
  * Return: 0 for success
