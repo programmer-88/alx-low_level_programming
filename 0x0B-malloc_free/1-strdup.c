@@ -10,9 +10,9 @@
 
 char *_strdup(char *str)
 {
-	unsigned int size = (strlen(str));
+	int size = (strlen(str));
 	char *array;
-	unsigned int i;
+	int i;
 
 	if (str == NULL)
 	{
