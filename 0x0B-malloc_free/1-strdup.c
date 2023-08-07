@@ -10,14 +10,19 @@
 
 char *_strdup(char *str)
 {
-	int size = (strlen(str));
+	int size = 0, i = 0;
 	char *array;
-	int i;
 
 	if (str == NULL)
 	{
 		return (NULL);
 	}
+	while (str[i] != '\0')
+	{
+		size++;
+		i++;
+	}
+	
 
 	array = (char *)malloc(size * sizeof(str));
 
