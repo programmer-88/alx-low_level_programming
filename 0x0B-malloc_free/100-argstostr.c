@@ -8,7 +8,7 @@
 */
 char *argstostr(int ac, char **av)
 {
-	int i, len = 0, position = 0;
+	int i, j, v, x = ac;
 	char *result;
 
 	if (ac == 0 || av == NULL)
@@ -18,24 +18,33 @@ char *argstostr(int ac, char **av)
 
 	for (i = 0; i < ac; i++)
 	{
-		len += strlen(av[i] + 1);
+		for (j = 0; av[i][j]; j++)
+		{
+			x++;
+		}
+
 	}
 
-	result = (char *)malloc(len * sizeof(char));
+	result = malloc(sizeof(char) * x + 1);
 
 	if (result == NULL)
 	{
 		return (NULL);
 	}
 
+	v = 0;
+
 	for (i = 0; i < ac; i++)
 	{
-		strcpy(result + position, av[i]);
-		position += strlen(av[i]);
-		result[position] = '\n';
-		position++;
+		for (j = 0; av[i][j]; j++)
+		{
+			result[v++] = av[i][j];
+		}
+		result[v++] = '\n';
+
 	}
-	result[position - 1] = '\0';
+
+	result[x] = '\0';
 	return (result);
 
 }
