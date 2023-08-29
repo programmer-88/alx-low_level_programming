@@ -32,7 +32,7 @@ size_t print_listint_safe(const listint_t *head)
 			_n = _n->next;
 			new_n++;
 		}
-		if(!head)
+		if (!head)
 		{
 			exit(98);
 		}
