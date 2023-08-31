@@ -9,28 +9,22 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-
-	unsigned int dec = 0;
-	int len = 0, base = 1;
+	unsigned int decimal = 0;
+	int str_len = 0, base = 1;
 
 	if (!valid_check(b))
-	{
 		return (0);
-	}
 
-	while (b[len] != '\0')
-	{
-		len++;
-	}
+	while (b[str_len] != '\0')
+		str_len++;
 
-	while (len)
+	while (str_len)
 	{
-		dec += (b[len - 1] - '\0' * base);
+		decimal += ((b[str_len - 1] - '0') * base);
 		base *= 2;
-		len--;
+		str_len--;
 	}
-
-	return (dec);
+	return (decimal);
 }
 
 /**
@@ -42,15 +36,12 @@ unsigned int binary_to_uint(const char *b)
 int valid_check(const char *b)
 {
 	if (b == NULL)
-	{
 		return (0);
-	}
+
 	while (*b)
 	{
 		if (*b != '1' && *b != '0')
-		{
 			return (0);
-		}
 		b++;
 	}
 	return (1);
