@@ -9,29 +9,49 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-	unsigned int k = 1;
-	unsigned int i = 0;
-	int c;
-	unsigned int len;
 
-	len = strlen(b);
+	unsigned int dec = 0;
+	int len = 0, base = 1;
 
-	if (b == NULL)
+	if (!valid_check(b))
 	{
 		return (0);
 	}
 
-	for (c = len - 1; c >= 0; c--)
+	while (b[len] != '\0')
 	{
-		if (b[c] != '0' && b[c] != '1')
+		len++;
+	}
+
+	while (len)
+	{
+		dec += (b[len - 1] - '\0' * base);
+		base *= 2;
+		len--;
+	}
+
+	return (dec);
+}
+
+/**
+ * valid_check - checks if string is a valid binary string
+ * @b: binary to check
+ * Return: success if valid otherwise 0
+*/
+
+int valid_check(const char *b)
+{
+	if (b == NULL)
+	{
+		return (0);
+	}
+	while (*b)
+	{
+		if (*b != '1' && *b != '0')
 		{
 			return (0);
 		}
-		if (b[c] == '1')
-		{
-			i += k;
-		}
-		k *= 2;
+		b++;
 	}
-	return (i);
+	return (1);
 }
